@@ -2,12 +2,10 @@ let mic = document.getElementById("mic");
 let chatareamain = document.querySelector('.chatarea-main');
 let chatareaouter = document.querySelector('.chatarea-outer');
 
-let intro = ["Hello, I am Chitti", "Hi, I am a Robo", "Hello, My name is Chitti"];
+let intro = ["Hello, I am your helper", "Hi, I am a Robo", "Hello, My name is Chitti"];
 let help = ["How may i assist you?","How can i help you?","What i can do for you?"];
-let greetings = ["i am good you little piece of love", "i am fine, what about you", "don't want to talk", "i am good"];
-let hobbies = ["i love to talk with humans", "i like to make friends like you", "i like cooking"];
-let pizzas = ["which type of pizza do you like?", "i can make a pizza for you", "i would love to make a pizza for you", "would you like cheese pizza?"];
-let thank = ["Most welcome","Not an issue","Its my pleasure","Mention not"];
+let greetings = ["i am fine, what about you", "i am good"];
+let thank = ["Most welcome","Not an issue","Its my pleasure"];
 let closing = ['Ok bye-bye','As you wish, bye take-care','Bye-bye, see you soon..']
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -42,14 +40,7 @@ function chatbotvoice(message){
         let finalresult = greetings[Math.floor(Math.random() * greetings.length)];
         speech.text = finalresult;
     }
-    if(message.includes('tell me something about you' || 'tell me something about your hobbies')){
-        let finalresult = hobbies[Math.floor(Math.random() * hobbies.length)];
-        speech.text = finalresult;
-    }
-    if(message.includes('pizza')){
-        let finalresult = pizzas[Math.floor(Math.random() * pizzas.length)];
-        speech.text = finalresult;
-    }
+
     if(message.includes('thank you' || 'thank you so much')){
         let finalresult = thank[Math.floor(Math.random() * thank.length)];
         speech.text = finalresult;
