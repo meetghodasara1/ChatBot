@@ -7,7 +7,7 @@ let help = ["How may i assist you?","How can i help you?","What i can do for you
 let greetings = ["i am fine, what about you", "i am good"];
 let thank = ["Most welcome","Not an issue","Its my pleasure"];
 let closing = ['Ok bye-bye','As you wish, bye take-care','Bye-bye, see you soon..']
-
+let eligibility = ['for B tech , in board exam minimum 45 percentage in PCM for more detail visit https://www.charusat.ac.in/admission/doc/AdmissionsEligibility.pdf']
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
